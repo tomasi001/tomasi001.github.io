@@ -64,7 +64,8 @@
       />
     </svg>
 
-    <div class="frost">
+    <div class="frost"></div>
+    <div>
       <!-- LANDING SECTION  -->
       <section id="introHeader">
         <!-- NAVBAR-->
@@ -364,11 +365,11 @@
           </section>
         </div>
         <div class="mobileProjectDisplay">
-          <section>
+          <!-- CHANGED: Section to Div, added class mobile-project-group -->
+          <div class="mobile-project-group">
             <h2 class="text-center py-4">Physics & VFX Code</h2>
             <div class="video-responsive-mobile">
               <iframe
-                height="275"
                 src="https://www.youtube.com/embed/Ng_S7tC1ulw"
                 title="YouTube video player"
                 frameborder="0"
@@ -379,7 +380,6 @@
             </div>
             <div class="video-responsive-mobile">
               <iframe
-                height="275"
                 src="https://www.youtube.com/embed/sEDM365aRQ0"
                 title="YouTube video player"
                 frameborder="0"
@@ -388,20 +388,16 @@
               >
               </iframe>
             </div>
-          </section>
-          <section class="col">
+          </div>
+
+          <div class="col mobile-project-group">
             <h2 class="text-center py-4">Creative Code</h2>
             <div class="video-responsive-mobile">
-              <video
-                src="videos/CubeExpress.mp4"
-                width="100%"
-                height="275"
-                controls
-              ></video>
+              <!-- REMOVED: height/width attributes, handled by CSS now -->
+              <video src="videos/CubeExpress.mp4" controls></video>
             </div>
             <div class="video-responsive-mobile">
               <iframe
-                height="275"
                 src="https://www.youtube.com/embed/frbJI9FF2Ko"
                 title="YouTube video player"
                 frameborder="0"
@@ -410,25 +406,27 @@
               >
               </iframe>
             </div>
-          </section>
-          <section class="col px-4">
+          </div>
+
+          <div class="col px-4 mobile-project-group">
             <h2 class="text-center py-4">3D Modelling</h2>
             <div class="video-responsive-mobile">
-              <video src="videos/ENVIRONMENT.mp4" width="100%" controls></video>
+              <video src="videos/ENVIRONMENT.mp4" controls></video>
             </div>
             <div class="video-responsive-mobile">
-              <video src="videos/KONG.mp4" width="100%" controls></video>
+              <video src="videos/KONG.mp4" controls></video>
             </div>
-          </section>
-          <section class="col px-4">
+          </div>
+
+          <div class="col px-4 mobile-project-group">
             <h2 class="text-center py-2">Animation</h2>
-            <div>
-              <video src="videos/HEAVENLY.mp4" width="100%" controls></video>
+            <div class="video-responsive-mobile">
+              <video src="videos/HEAVENLY.mp4" controls></video>
             </div>
-            <div>
-              <video src="videos/DOMINO.mp4" width="100%" controls></video>
+            <div class="video-responsive-mobile">
+              <video src="videos/DOMINO.mp4" controls></video>
             </div>
-          </section>
+          </div>
         </div>
       </section>
       <!-- EXPERIENCE -->

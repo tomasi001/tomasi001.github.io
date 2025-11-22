@@ -151,6 +151,13 @@ p {
 
 .frost {
   backdrop-filter: blur(40px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
 }
 
 h2 {
@@ -193,11 +200,37 @@ h3 {
   position: absolute;
 }
 
-.video-responsive-mobile iframe {
-  left: 5%;
-  top: 5%;
-  width: 90%;
+/* UPDATED: Robust responsive container for mobile videos/iframes */
+.video-responsive-mobile {
   position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  width: 90%;
+  margin: 0 auto 2rem auto; /* Center and add bottom spacing */
+}
+
+/* UPDATED: Target both iframe and video to fill the container */
+.video-responsive-mobile iframe,
+.video-responsive-mobile video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Add spacing between mobile project groups */
+.mobile-project-group {
+  padding-bottom: 4rem;
+  /* NEW: Re-enable scroll snapping for these project groups */
+  scroll-snap-align: start;
+  /* Optional: scroll-margin-top ensures the header doesn't cover the start of the section */
+  scroll-margin-top: 20px;
+}
+
+/* TARGET DESKTOP SUB-SECTIONS */
+#carousel-section section {
+  scroll-snap-align: start;
 }
 
 #projects {
