@@ -150,6 +150,12 @@ p {
   }
 }
 
+@media (max-width: 432px) {
+  .hideIntroBreaks {
+    display: none;
+  }
+}
+
 .frost {
   backdrop-filter: blur(40px);
   position: fixed;
@@ -357,4 +363,54 @@ h3 {
 
 .contactColumns img {
   border-radius: 1000px;
+}
+
+/* === RESPONSIVE FIXES === */
+/* Ensure text-centric sections fit on mobile screens */
+@media (max-width: 900px) {
+  /* Allow sections to grow beyond 100vh if content needs it */
+  section,
+  .centeredSection,
+  .centeredExperienceSection {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Reset fixed heights on paragraphs */
+  .centeredExperienceSection p {
+    height: auto;
+  }
+  /* Adjust alignment for text sections */
+  .centeredSection,
+  .centeredExperienceSection {
+    justify-content: flex-start; /* Start from top to avoid cutting off */
+    padding-top: 100px; /* Space for aesthetic balance/navbar */
+    padding-bottom: 80px;
+  }
+
+  /* Typography Adjustments for Mobile */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .centeredSection p,
+  .centeredExperienceSection p {
+    font-size: 16px; /* Slightly smaller text */
+    line-height: 1.6; /* Better readability */
+  }
+
+  /* Ensure padding is sufficient but not overwhelming */
+  .paddedContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  /* Specifically target the Foundation and Experience sections if needed */
+  #introPara,
+  #experience {
+    display: flex;
+    flex-direction: column;
+  }
 }
