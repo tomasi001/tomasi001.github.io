@@ -114,6 +114,13 @@ a {
   padding-top: 10px;
 }
 
+@media (max-width: 598px) {
+  #navBar {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 .navbar a {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
